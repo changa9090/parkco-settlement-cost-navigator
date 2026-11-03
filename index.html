@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>체류 신분별 교육비와 혜택 | Park &amp; Co Lawyers</title>
+  <link rel="stylesheet" href="brand/fonts.css">
+  <link rel="stylesheet" href="brand/tokens.css">
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+  <a class="skip" href="#school">학교비로 이동</a>
+  <header class="bar">
+    <a class="brand" href="#top">
+      <img src="brand/logo-negative.png" alt="Park &amp; Co Lawyers">
+    </a>
+    <nav>
+      <a href="#school">학교비</a>
+      <a href="#uni">대학</a>
+      <a href="#medicare">메디케어</a>
+      <a href="#pay">급여</a>
+      <a href="#desk">원문</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="overline">공개 자료 · 2026년 11월 3일</p>
+      <h1>체류 신분별 교육비와 혜택</h1>
+      <p class="lead">자녀 공립학교, 대학 학비, 메디케어, 센터링크 대기. 주와 비자에 따라 금액과 자격이 다릅니다.</p>
+      <p class="meta">각 주 교육 당국과 연방 기관이 공개한 문장입니다. 법률 자문이 아닙니다.</p>
+      <a class="cta" href="#school">학교비 보기</a>
+    </div>
+  </section>
+
+  <section class="paths">
+    <div class="band-inner path-grid">
+      <a class="path" href="#school">
+        <span class="idx">01</span>
+        <strong>공립학교</strong>
+        <span>두 신분과 학년을 고르면 그 금액만 남습니다.</span>
+      </a>
+      <a class="path" href="#uni">
+        <span class="idx">02</span>
+        <strong>대학</strong>
+        <span>CSP와 HELP는 연방 규칙입니다.</span>
+      </a>
+      <a class="path" href="#medicare">
+        <span class="idx">03</span>
+        <strong>메디케어와 급여</strong>
+        <span>가입 자격과 신규 거주자 대기입니다.</span>
+      </a>
+    </div>
+  </section>
+
+  <main>
+    <section class="band" id="school">
+      <div class="band-inner">
+        <h2>공립학교</h2>
+        <p class="intro">왼쪽과 오른쪽을 나란히 둡니다. 학년을 고르면 그 칸의 수업료만 남고, 문서에 금액이 없으면 그 칸은 비워 둡니다. 조건 표는 왼쪽 비자입니다.</p>
+        <p class="names">공식 명칭은 문서에 있는 그대로 둡니다. 뉴사우스웨일스에는 Temporary Skill Shortage (TSS)라고 남은 문서가 있습니다. 빅토리아는 Skills in Demand (replaced Temporary Skills Shortage 7/12/24)라고 적습니다. 호주수도준주는 2026년 9월 14일 페이지에서도 MLTSSL이라고 씁니다.</p>
+        <div id="controls">
+          <div class="picker" id="presets" role="group" aria-label="비교 예시">
+            <button type="button" data-left="482" data-right="189">482와 영주</button>
+            <button type="button" data-left="482" data-right="820">482와 820</button>
+            <button type="button" data-left="500" data-right="820">500과 820</button>
+          </div>
+          <div class="pair">
+            <div>
+              <p class="names">왼쪽</p>
+              <div class="picker" id="picker-a" role="group" aria-label="왼쪽 비자">
+                <button type="button" data-visa="482">482</button>
+                <button type="button" data-visa="485">485</button>
+                <button type="button" data-visa="491">491</button>
+                <button type="button" data-visa="494">494</button>
+                <button type="button" data-visa="500">500</button>
+                <button type="button" data-visa="820">820·309</button>
+                <button type="button" data-visa="189">189·190</button>
+              </div>
+            </div>
+            <div>
+              <p class="names">오른쪽</p>
+              <div class="picker" id="picker-b" role="group" aria-label="오른쪽 비자">
+                <button type="button" data-visa="482">482</button>
+                <button type="button" data-visa="485">485</button>
+                <button type="button" data-visa="491">491</button>
+                <button type="button" data-visa="494">494</button>
+                <button type="button" data-visa="500">500</button>
+                <button type="button" data-visa="820">820·309</button>
+                <button type="button" data-visa="189">189·190</button>
+              </div>
+            </div>
+          </div>
+          <p class="names">학년</p>
+          <div class="picker" id="stage" role="group" aria-label="학년">
+            <button type="button" data-stage="kinder">유치원</button>
+            <button type="button" data-stage="primary">초등</button>
+            <button type="button" data-stage="mid">7–10학년</button>
+            <button type="button" data-stage="senior">11–12학년</button>
+          </div>
+          <div id="course-wrap" hidden>
+            <p class="names">500 부모의 과정. 금액이 갈리는 주에만 이 구분이 적용됩니다.</p>
+            <div class="picker" id="course" role="group" aria-label="부모 과정">
+              <button type="button" data-course="he">고등교육·석사·일반 박사</button>
+              <button type="button" data-course="elicos">ELICOS·VET·비학위</button>
+              <button type="button" data-course="research">연구과정</button>
+            </div>
+          </div>
+        </div>
+        <p class="intro" id="visa-blurb"></p>
+        <div class="benefit-grid">
+          <article class="card"><h3>대학</h3><div id="cmp-uni"></div></article>
+          <article class="card"><h3>메디케어</h3><div id="cmp-med"></div></article>
+          <article class="card"><h3>급여 대기</h3><div id="cmp-pay"></div></article>
+        </div>
+        <div class="cmp-head" id="cmp-head"></div>
+        <div class="scan" id="scan"></div>
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <caption id="fee-caption">조회 2026년 11월 3일</caption>
+              <thead>
+                <tr><th>주</th><th>수업료</th><th>조건</th></tr>
+              </thead>
+              <tbody id="fee-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="visa-more"></div>
+        <p class="names">호주수도준주에서 자녀를 등록할 수 없는 비자는 400, 590, 771, 884, 942, 988입니다. 그 목록에 없는 비자는 등록할 수 있습니다. 주 이름 아래 원문·문의를 누르면 그 주의 문서와 연락처로 갑니다.</p>
+      </div>
+    </section>
+
+    <section class="band ivory" id="uni">
+      <div class="band-inner">
+        <h2>대학</h2>
+        <p class="intro">CSP와 HELP는 주별 표가 아닙니다. Study Assist 비시민 페이지, 표기 2026년 4월 10일입니다. 임시 비자 보유자와 그 밖의 국제 학생은 CSP와 HELP 대상이 아니고 full fee-paying place에 등록된다고 적습니다. overseas student fees라는 문구는 그 페이지에 없습니다. 학생 부담금을 미리 낸다는 문장은 뉴질랜드 시민 단락에 있습니다.</p>
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <caption>신분별 CSP와 HELP</caption>
+              <thead>
+                <tr><th>신분</th><th>CSP</th><th>HELP</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>뉴질랜드 시민</td><td>Yes</td><td>No</td></tr>
+                <tr><td>뉴질랜드 SCV, 장기 거주 요건 충족</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td>시민권으로 가는 영주 비자를 받은 이전 SCV</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td>Pacific engagement visa</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td>영주 인도적 비자</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td>그 밖 영주권</td><td>Yes</td><td>브리징 스터디만</td></tr>
+                <tr><td>임시 비자</td><td>No</td><td>No</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h3>2026년 학생 부담금 상한</h3>
+        <p class="intro">전일제 1년, 교육부 indexed rates입니다. 대학이 이 상한까지 매깁니다. 482, 485, 500, 820의 배우자나 성인 자녀도 임시 비자 줄을 따릅니다. 대학 40곳의 해외 등록금 표는 만들지 않았습니다.</p>
+        <div class="figures">
+          <article class="figure"><span>2026</span><b>4,738</b><em>교육, 임상심리 석사, 영어, 수학·통계, 간호, 원주민·외국어, 농업</em></article>
+          <article class="figure"><span>2026</span><b>9,537</b><em>보건 관련, 건축·컴퓨팅, 공연예술, 공학, 과학, 전문 경로 심리·사회복지, 병리</em></article>
+          <article class="figure"><span>2026</span><b>13,558</b><em>의학, 치의학, 수의학</em></article>
+          <article class="figure"><span>2026</span><b>17,399</b><em>법, 회계, 경영, 경제, 상학, 커뮤니케이션, 사회·문화</em></article>
+        </div>
+        <p class="names">Study Assist 학생 부담금 페이지는 2026년 7월 15일 표기로 2027년 1월 1일 표를 본표로 보여 줍니다. 그 표의 숫자는 4,908달러와 18,025달러입니다. 2026년 영어 예시 4,738달러는 같은 페이지의 예시에 있습니다. HECS-HELP가 없는 사람은 센서스 날짜까지 학생 부담금을 내지 않으면 CSP 등록이 취소된다고 그 페이지가 적습니다. 일반 학위의 영주권자는 HELP가 브리징 스터디로 한정됩니다.</p>
+        <p class="sources">원문. <a href="https://www.studyassist.gov.au/loan-eligibility/non-australian-citizens">Study Assist, 비시민</a>. <a href="https://www.studyassist.gov.au/financial-and-study-support/commonwealth-supported-places/student-contribution-amounts">학생 부담금</a>. <a href="https://www.education.gov.au/download/19201/2026-indexed-rates/41481/document/pdf">교육부 2026 indexed rates</a>. 문의는 <a href="https://www.studyassist.gov.au/contact-us">Study Assist Contact us</a>입니다. 비자 자체는 Study Assist가 <a href="https://www.homeaffairs.gov.au/help-and-support/contact-us">Home Affairs 문의</a>로 안내합니다.</p>
+      </div>
+    </section>
+
+    <section class="band" id="medicare">
+      <div class="band-inner">
+        <h2>메디케어</h2>
+        <div class="split">
+          <article class="card">
+            <h3>영주 비자와 신청</h3>
+            <p>Services Australia 영주 가입 페이지, 최종 수정 2025년 7월 11일입니다. 영주 비자를 가졌거나, 부모 비자가 아닌 영주 비자를 신청한 사람이 대상입니다. 신청 중인 경우는 일할 수 있는 비자를 가졌거나, 시민·영주권자·호주 거주 뉴질랜드 시민인 부모·배우자·자녀가 있어야 합니다. 309/100과 820/801 결합 신청이 여기 들어갑니다.</p>
+            <p>기산점은 영주 신청일입니다. 해외에서 신청한 경우는 입국일입니다. 820·309를 받은 날과 신청일이 다를 수 있다고 적혀 있습니다. 부모 비자 신청은 허가 전이 원칙이고, 페이지에 적힌 예외는 상호 의료 협정 국가, 143 앞의 173, 864 앞의 884입니다.</p>
+          </article>
+          <article class="card">
+            <h3>장관 명령의 임시 비자</h3>
+            <p>최종 수정 2025년 12월 17일입니다. 이 목록에 482, 500, 485, 417, 462는 이름이 없습니다. 이름이 없다는 사실만으로 다른 경로의 가입까지 닫히지는 않습니다.</p>
+            <ul class="chips">
+              <li>491</li><li>494</li><li>785</li><li>790</li><li>786</li><li>449</li>
+              <li>173</li><li>143</li><li>884</li><li>864</li><li>070</li>
+            </ul>
+            <p class="names">같은 페이지에 시민·영주권자의 de facto와 PALM 403 가족 동반 시범도 있습니다.</p>
+          </article>
+        </div>
+        <h3>상호 의료 협정 국가</h3>
+        <p class="intro">Medicare Benefits Schedule note GN.3.9, 검토 2024년 2월 1일, 그리고 Services Australia 국가 목록, 표기 2026년 9월 15일입니다. 두 페이지의 나라 이름은 같습니다. 표기만 the Netherlands, the United Kingdom과 Netherlands, United Kingdom으로 다릅니다.</p>
+        <ul class="chips">
+          <li>벨기에</li><li>핀란드</li><li>이탈리아</li><li>몰타</li><li>네덜란드</li><li>뉴질랜드</li>
+          <li>노르웨이</li><li>아일랜드</li><li>슬로베니아</li><li>스웨덴</li><li>영국</li>
+        </ul>
+        <div class="notice">
+          <h3>나라마다 범위가 다릅니다</h3>
+          <p>GN.3.9는 이탈리아와 몰타를 도착일부터 6개월로 한정하고, 뉴질랜드와 아일랜드 방문자는 공립병원과 PBS 의약품만이며 MBS 서비스는 아니라고 적습니다. 국가 목록의 짧은 문장은 그 한정을 반복하지 않습니다.</p>
+          <p>Services Australia 방문 페이지는 이탈리아를 6개월 또는 비자 만료 중 빠른 날(2025년 11월 3일), 몰타를 6개월 또는 그보다 빠른 비자 만료(2025년 3월 17일)로 적습니다. 뉴질랜드(2025년 5월 26일)와 아일랜드(2025년 6월 5일)는 공립병원과 일부 PBS이고, 병원 밖 진료의 메디케어 혜택은 없으며 메디케어 카드도 없습니다. 뉴질랜드는 출국일에 끝나고, 아일랜드는 비자 만료에 끝납니다.</p>
+        </div>
+        <p class="sources">원문. <a href="https://www.servicesaustralia.gov.au/enrolling-medicare-if-youre-australian-permanent-resident?context=60092">영주 가입</a>. <a href="https://www.servicesaustralia.gov.au/enrolling-medicare-if-youre-temporary-resident-covered-ministerial-order?context=60092">장관 명령 가입</a>. <a href="https://www.servicesaustralia.gov.au/about-reciprocal-health-care-agreements?context=22481">상호 의료 협정</a>. <a href="https://www9.health.gov.au/mbs/fullDisplay.cfm?type=note&q=GN.3.9&criteria=reciprocal%20health%20care">MBS note GN.3.9</a>. <a href="https://www.servicesaustralia.gov.au/reciprocal-health-care-agreements-visiting-from-italy?context=22481">이탈리아</a>, <a href="https://www.servicesaustralia.gov.au/reciprocal-health-care-agreements-visiting-from-malta?context=22481">몰타</a>, <a href="https://www.servicesaustralia.gov.au/reciprocal-health-care-agreements-visiting-from-new-zealand?context=22481">뉴질랜드</a>, <a href="https://www.servicesaustralia.gov.au/reciprocal-health-care-agreements-visiting-from-ireland?context=22481">아일랜드</a>. 문의는 <a href="https://www.servicesaustralia.gov.au/contact-us">Services Australia Contact us</a>입니다.</p>
+      </div>
+    </section>
+
+    <section class="band ivory" id="pay">
+      <div class="band-inner">
+        <h2>센터링크, 신규 거주자 대기</h2>
+        <p class="intro">Services Australia는 2019년 1월 1일 이후 받은 영주 비자에 최대 4년 대기가 있고, 그 목록에 JobSeeker Payment가 있다고 적습니다. Social Security Act 1991 s 623A, 2026년 9월 20일 편집본은 jobseeker payment의 대기를 208주로 둡니다. 2019년 1월 1일은 그 편집본에 없고, 2018년 Promoting Sustainable Welfare 개정법이 그 날 이후 영주 비자를 받은 사람에게 208주를 적용합니다.</p>
+        <p class="intro">이 대기는 새로 거주자가 된 사람의 이야기입니다. 482, 500, 485 소지자가 4년 뒤에 JobSeeker를 받는 문장은 아닙니다.</p>
+        <p class="names">아래 나머지 줄은 같은 대기 페이지, 최종 수정 2025년 12월 4일, QC 30726입니다. 2019년 1월 1일 이후 영주 비자 또는 파트너 임시 비자를 받은 경우입니다. 820·309은 그 목록의 일부만 열립니다.</p>
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <caption>대기 페이지가 적은 급여</caption>
+              <thead>
+                <tr><th>대기</th><th>급여·카드</th><th>820·309</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4년</td>
+                  <td>Austudy, Commonwealth Seniors Health Card, Ex-Carer Allowance (Child) Health Care Card, Farm Household Allowance, JobSeeker, Low Income Health Care Card, Mobility Allowance, Parenting Payment, Pensioner Education Supplement, Special Benefit, Tertiary Access Payment, Youth Allowance</td>
+                  <td>Low Income Health Care Card, Special Benefit</td>
+                </tr>
+                <tr>
+                  <td>2년</td>
+                  <td>Carer Payment, Parental Leave Pay</td>
+                  <td>Parental Leave Pay</td>
+                </tr>
+                <tr>
+                  <td>1년</td>
+                  <td>Carer Allowance, Family Tax Benefit Part A</td>
+                  <td>Family Tax Benefit Part A</td>
+                </tr>
+                <tr>
+                  <td>없음</td>
+                  <td>Child Care Subsidy, Double Orphan Pension, Family Tax Benefit Part B, Stillborn Baby Payment</td>
+                  <td>페이지는 Part A만 파트너 임시에 열어 둡니다</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="intro">820·309의 대기는 신청일과 호주에 살기 위해 도착한 날 중 늦은 날부터 셉니다. 해외 체류일은 대기 일수에 들어가지 않습니다. 10년 대기인 Age Pension과 DSP는 이 페이지에서 확인한 문장이 아닙니다.</p>
+        <p class="sources">원문. <a href="https://www.servicesaustralia.gov.au/newly-arrived-residents-waiting-period?context=43921">Newly arrived resident's waiting period</a>. <a href="https://www.legislation.gov.au/C2004A04121/2026-09-20/2026-09-20/text/original/epub/OEBPS/document_2/document_2.html">Social Security Act 1991, 2026년 9월 20일</a>. <a href="https://www.legislation.gov.au/C2018A00168/asmade/2018-12-10/text/original/pdf">2018년 Promoting Sustainable Welfare 개정법</a>. 전화 안내는 <a href="https://www.servicesaustralia.gov.au/phone-us">Phone us</a>, 그 밖은 <a href="https://www.servicesaustralia.gov.au/contact-us">Contact us</a>입니다.</p>
+      </div>
+    </section>
+
+    <section class="band ivory" id="desk">
+      <div class="band-inner">
+        <h2>원문과 문의</h2>
+        <p class="intro">금액과 자격은 아래 기관 문서의 문장입니다. 메일과 전화는 그 문서나 그 문서가 안내하는 문의 페이지에 적힌 것만 옮겼습니다.</p>
+        <div class="state-grid">
+          <article class="state-card" id="desk-NSW">
+            <h3>뉴사우스웨일스</h3>
+            <p><a href="https://www.deinternational.nsw.edu.au/__data/assets/pdf_file/0013/16402/16402-Education-Fees.pdf">수업료 요금표</a>. <a href="https://www.deinternational.nsw.edu.au/?a=16410">비자별 등록 조건</a>. <a href="https://www.deinternational.nsw.edu.au/__data/assets/pdf_file/0011/17759/17759-Application-for-Fee-Exemption-Based-on-Low-Income.pdf">저소득 면제 신청서</a>.</p>
+            <p>요금표에 적힌 문의. <a href="mailto:tempvisa@det.nsw.edu.au">tempvisa@det.nsw.edu.au</a>. 안내 주소는 deinternational.nsw.edu.au/trp 입니다.</p>
+          </article>
+          <article class="state-card" id="desk-VIC">
+            <h3>빅토리아</h3>
+            <p><a href="https://www.study.vic.gov.au/en/international-student-program/support-and-payments/school-fees">School Fees</a>. <a href="https://www2.education.vic.gov.au/pal/international-student-program/print-all">국제학생 프로그램 정책</a>. <a href="https://www.study.vic.gov.au/en/international-student-program/schools-and-programs/temporary-student">임시 학생 안내</a>.</p>
+            <p>Payments and Support의 일반 문의. <a href="mailto:international@education.vic.gov.au">international@education.vic.gov.au</a>. 전화 +61 3 7022 1000. 통역은 TIS 131 450 뒤에 이 번호입니다. <a href="https://www.study.vic.gov.au/en/international-student-program/support-and-payments">문의가 적힌 페이지</a>.</p>
+          </article>
+          <article class="state-card" id="desk-QLD">
+            <h3>퀸즐랜드</h3>
+            <p><a href="https://eqi.com.au/Documents/tra-fees.pdf">2026년 10월 요금표</a>. <a href="https://ppr.qed.qld.gov.au/pp/temporary-residents-admissions-policy">임시거주자 입학 정책</a>. <a href="https://ppr.qed.qld.gov.au/attachment/de-international-schedule-of-visa-subclasses-and-enrolment-conditions.pdf">비자 일정표</a>.</p>
+            <p><a href="mailto:temporaryresidents@qed.qld.gov.au">temporaryresidents@qed.qld.gov.au</a>. 호주 안 1800 943 122. 해외 +61 7 3513 6983.</p>
+          </article>
+          <article class="state-card" id="desk-WA">
+            <h3>서호주</h3>
+            <p>482 가족 수업료. <a href="https://www.education.wa.edu.au/web/policies/-/enrolment-framework-for-students-with-a-visa-in-public-schools">입학 프레임워크</a>. 일반 문의는 학교 또는 <a href="https://www.education.wa.edu.au/organisation/contact">지역 교육청</a>입니다. 정책 문의 전화 (08) 9264 4322.</p>
+            <p>500 수업료. <a href="https://www.education.wa.edu.au/web/international-education/tuition-fees">교육부 수업료</a>. <a href="https://www.tafeinternational.wa.edu.au/wa-government-schools/school-fees-charges">TIWA 요금</a>. <a href="https://www.tafeinternational.wa.edu.au/wa-government-schools/children-who-are-dependants-visa-holders">의존 자녀</a>.</p>
+            <p>TIWA 전화 +61 8 9218 2100. <a href="mailto:tss.tiwa@dtwd.wa.gov.au">tss.tiwa@dtwd.wa.gov.au</a>. <a href="mailto:admissions.tiwa@dtwd.wa.gov.au">admissions.tiwa@dtwd.wa.gov.au</a>.</p>
+          </article>
+          <article class="state-card" id="desk-SA">
+            <h3>사우스오스트레일리아</h3>
+            <p>482. <a href="https://www.education.sa.gov.au/parents-and-families/enrol-school-or-preschool/families-482-visas/student-fees-enrolment">학생 수수료와 등록</a>. <a href="https://www.education.sa.gov.au/parents-and-families/enrol-school-or-preschool/families-482-visas/482-visa-student-fee-calculator-2026">2026 계산기</a>. <a href="mailto:Education.TempVisaStudents@sa.gov.au">Education.TempVisaStudents@sa.gov.au</a>.</p>
+            <p>500 의존 자녀. <a href="https://www.internationalstudents.sa.edu.au/app/uploads/PDFS/Fee-Schedule_Eng_Dependants_2026.pdf">2026 일정</a>은 education.isp@sa.gov.au, 전화 +61 8 8226 3402. <a href="https://www.internationalstudents.sa.edu.au/app/uploads/PDFS/Fee-Schedule_Dependants_2027.pdf">2027 일정</a>은 education.isp@schools.sa.edu.au.</p>
+          </article>
+          <article class="state-card" id="desk-TAS">
+            <h3>태즈메이니아</h3>
+            <p><a href="https://study.tas.gov.au/study/trp/">Temporary Resident Program</a>. <a href="https://study.tas.gov.au/wp-content/uploads/2025/12/TRP-Visas-at-a-Glance-V19.pdf">Visas at a Glance</a>.</p>
+            <p>프로그램 문의 <a href="mailto:admissions@study.tas.gov.au">admissions@study.tas.gov.au</a>. 페이지 문의 <a href="mailto:info@study.tas.gov.au">info@study.tas.gov.au</a>, 전화 +61 3 6165 5727.</p>
+          </article>
+          <article class="state-card" id="desk-ACT">
+            <h3>호주수도준주</h3>
+            <p><a href="https://www.act.gov.au/education-and-training/international-students-and-temporary-visa-holders/enrol-a-child-dependant-of-a-temporary-resident">의존 자녀 등록</a>.</p>
+            <p>등록 문의 <a href="mailto:ieu@act.gov.au">ieu@act.gov.au</a>.</p>
+          </article>
+          <article class="state-card" id="desk-NT">
+            <h3>노던준주</h3>
+            <p><a href="https://nt.gov.au/learning/international-education/study-at-an-nt-government-school/school-fees-for-international-students">국제학생 학비</a>. <a href="https://nt.gov.au/__data/assets/pdf_file/0009/1570626/G23.pdf">관보 G23</a>.</p>
+            <p><a href="https://nt.gov.au/learning/international-education/help-for-parents-and-students/contact-international-services">International Services</a>. <a href="mailto:internationalservice@education.nt.gov.au">internationalservice@education.nt.gov.au</a>. 전화 +61 8 8999 5895.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band stone" id="gaps">
+      <div class="band-inner">
+        <h2>이 페이지에 없는 것</h2>
+        <ul class="clean">
+          <li>빅토리아 2026년 의존 학생 금액. 공개 페이지 제목은 School Fees 2027입니다.</li>
+          <li>사우스오스트레일리아 482의 2026년 상한. 페이지는 2027년 상한만 적고, 2026년은 계산기 링크입니다.</li>
+          <li>서호주 직원용 비자 목록. 로그인이 필요합니다.</li>
+          <li>퀸즐랜드 비자 일정표의 인쇄된 발행일. 2026년 10월 6일은 정책 version 2.0의 날짜입니다.</li>
+          <li>서호주 500 수업료의 해. 교육부 제목은 2026년이고 TIWA 캡션은 2027년입니다.</li>
+          <li>TAFE 보조, 교통 할인, 앰뷸런스, 에너지 환급.</li>
+          <li>비자 신청 수수료.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="services" id="next">
+    <div class="band-inner">
+      <h2>이 페이지 다음으로 가는 곳</h2>
+      <p class="intro">문의, 심사기간, 반복되는 질문, 기술이민 서류검토입니다.</p>
+      <div class="path-grid svc-grid">
+        <a class="path" href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">
+          <span class="idx">01</span>
+          <strong>일반 문의 허브</strong>
+          <span>이민 문의가 모이는 공식 접수 페이지입니다.</span>
+        </a>
+        <a class="path" href="https://parklawyers.com.au/case-review/gsm-case-review/?lang=ko" target="_blank" rel="noopener">
+          <span class="idx">02</span>
+          <strong>GSM Case Review</strong>
+          <span>189·190·491 서류검토. 495달러, GST 포함.</span>
+        </a>
+        <a class="path" href="https://changa9090.github.io/visa-global-processing-time/" target="_blank" rel="noopener">
+          <span class="idx">03</span>
+          <strong>비자 프로세싱 시간</strong>
+          <span>접수일을 넣으면 예상 완료일을 계산합니다.</span>
+        </a>
+        <a class="path" href="https://faq.immispecialist.com/" target="_blank" rel="noopener">
+          <span class="idx">04</span>
+          <strong>이민 FAQ</strong>
+          <span>반복된 이민 질문을 모아 둔 공개 답변입니다.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="band-inner">
+      <img src="brand/logo-positive.png" alt="Park &amp; Co Lawyers">
+      <p>Park &amp; Co Lawyers · 공개 자료 정리 · 2026년 11월 3일<br>검토용. 법률 자문이 아닙니다.</p>
+    </div>
+  </footer>
+  <script src="app.js?v=8"></script>
+</body>
+</html>
