@@ -124,7 +124,7 @@ h1 {
 
 .path-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -346,6 +346,55 @@ h1 {
   line-height: 1.5;
 }
 
+.buy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.buy-grid article {
+  padding: 14px 14px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-1);
+}
+
+.buy-grid .st {
+  margin: 0;
+  color: var(--color-charcoal-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.buy-grid b {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-burgundy);
+  font-family: var(--font-display-serif);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.buy-grid b.word {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.buy-grid p:last-child {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+#buy .pair { margin-bottom: 16px; }
+
 .table-wrap { overflow-x: auto; }
 
 table { width: 100%; border-collapse: collapse; }
@@ -453,7 +502,7 @@ footer img { height: 28px; width: auto; }
 @media (max-width: 900px) {
   .bar, .hero, .paths, .band, .services, footer { padding-left: 20px; padding-right: 20px; }
   .path-grid, .split, .state-grid, .pair, .benefit-grid, .svc-grid, footer .band-inner { grid-template-columns: 1fr; display: grid; }
-  .scan, .figures { grid-template-columns: 1fr 1fr; }
+  .scan, .figures, .buy-grid { grid-template-columns: 1fr 1fr; }
   .cmp-head, .crow { grid-template-columns: 1fr; }
   .bar { align-items: flex-start; flex-direction: column; }
   html { scroll-padding-top: 168px; }
