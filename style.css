@@ -508,14 +508,14 @@ footer img { height: 28px; width: auto; }
   html { scroll-padding-top: 168px; }
 }
 
-/* Park & Co Unified Visit Counter & Referral Modal v2 */
+/* Park & Co Unified Visit Counter & Referral Modal v2.1 */
 .visit-counter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; align-items: center; }
 .visit-counter[hidden] { display: none !important; }
 .visit-counter:not([hidden]) { cursor: pointer; }
 .visit-counter > span em { font-style: normal; }
-.visit-counter > span { background: #FFFFFF; border: 1px solid #DED6C8; border-radius: 999px; padding: 5px 13px; font-size: 12.5px; color: #4A4644; display: inline-flex; align-items: center; transition: border-color 0.15s ease, background 0.15s ease; }
-.visit-counter:not([hidden]):hover > span { border-color: #7A1F2B; background: #FFFDF9; }
-.visit-counter b { color: #7A1F2B; font-weight: 800; margin-left: 6px; font-variant-numeric: tabular-nums; }
+.visit-counter > span { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px; padding: 5px 13px; font-size: 12.5px; color: #E8E2D9; display: inline-flex; align-items: center; transition: border-color 0.15s ease, background 0.15s ease; }
+.visit-counter:not([hidden]):hover > span { border-color: #FDE68A; background: rgba(255, 255, 255, 0.11); }
+.visit-counter b { color: #FDE68A; font-weight: 800; margin-left: 6px; font-variant-numeric: tabular-nums; }
 #vc-modal { display: none; position: fixed; inset: 0; z-index: 3200; background: rgba(26, 18, 17, 0.56);
   align-items: center; justify-content: center; padding: 16px; }
 #vc-modal.open { display: flex; }
@@ -528,6 +528,11 @@ footer img { height: 28px; width: auto; }
 #vc-modal .vc-close { float: right; border: 0; background: none; font-size: 1.45rem; line-height: 1; cursor: pointer;
   color: #5A5654; min-width: 34px; min-height: 34px; padding: 0; }
 #vc-modal .vc-close:hover { color: #7A1F2B; }
+.vc-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 0 8px; flex-wrap: wrap; }
+.vc-range-tabs { display: inline-flex; gap: 4px; background: #F4F0E8; padding: 3px; border-radius: 999px; }
+.vc-range-btn { border: 0; background: transparent; color: #5A5654; font-size: 0.75rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px; cursor: pointer; }
+.vc-range-btn.active { background: #7A1F2B; color: #FFFFFF; }
 .vc-svg { width: 100%; height: auto; display: block; }
 .vc-grid { stroke: #E5DEC9; stroke-width: 1; }
 .vc-ylab { font-size: 11px; fill: #5A5654; text-anchor: end; }
