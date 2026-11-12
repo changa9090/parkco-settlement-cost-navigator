@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://changa9090.github.io/shared/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://changa9090.github.io/shared/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://changa9090.github.io/shared/fonts/Manrope-VF.ttf") format("truetype");
+}
+
 /* Park & Co 2026 brand fonts, self-hosted from ./fonts (all SIL OFL 1.1). */
 
 @font-face {
