@@ -241,8 +241,8 @@
           tone: isKinderOnly ? 'ok' : 'fee',
           badgeKo: isKinderOnly ? '유치원 단독 재학 면제 ($0) · P–12 가구 $4,000' : '가구당 연 $4,000 상한 (유치원 단독 시 $0)',
           badgeEn: isKinderOnly ? 'Kinder-Only Exempt ($0) · P–12 A$4,000/family' : 'A$4,000/yr Family Cap (Kinder-only $0)',
-          detailKo: '서호주 482 특별 규정: 첫째·단독 자녀가 유치원(Kindergarten)만 재학하는 해에는 $4,000 학비가 전액 면제($0)되며 Pre-primary~12학년 재학 시 자녀 수와 무관하게 가구당 연 $4,000 상한이 적용됩니다.',
-          detailEn: 'WA 482 rule: Exempt ($0) if the eldest/only enrolled child is in Kindergarten; once any child enrols in Pre-primary to Year 12, a flat A$4,000 per family/year cap applies regardless of child count.',
+          detailKo: '서호주 482 특별 규정: 첫째·단독 자녀가 유치원(Kindergarten)만 재학하는 해에는 $4,000 학비가 전액 면제($0)되며 Pre-primary~12학년 재학 시 자녀 수와 무관하게 가구당 연 $4,000 상한이 적용됩니다 (단, 가구 총소득 $90,000 이하 시 TIWA 재정곤란 학비 면제 신청 가능).',
+          detailEn: 'WA 482 rule: Exempt ($0) if the eldest/only enrolled child is in Kindergarten; once any child enrols in Pre-primary to Year 12, a flat A$4,000 per family/year cap applies regardless of child count (TIWA financial hardship waiver available where gross household income is <= A$90,000).',
           perPrimary: 4000, perMid: 4000, perSenior: 4000, appFee: 0, familyCap: isKinderOnly ? 0 : 4000, saSiblingDiscount: false
         };
       }
@@ -487,13 +487,14 @@
     }
 
     if (st === 'NSW') {
-      // Revenue NSW FY 2026-27 standard residential scale
+      // Revenue NSW FY 2026-27 standard residential scale + 7% Premium Property Duty above $3,721,000
       if (v <= 18000) return Math.max(20, Math.ceil(v / 100) * 1.25);
       if (v <= 38000) return 225 + Math.ceil((v - 18000) / 100) * 1.5;
       if (v <= 103000) return 525 + Math.ceil((v - 38000) / 100) * 1.75;
       if (v <= 387000) return 1662 + Math.ceil((v - 103000) / 100) * 3.5;
       if (v <= 1290000) return 11602 + Math.ceil((v - 387000) / 100) * 4.5;
-      return 52237 + Math.ceil((v - 1290000) / 100) * 5.5;
+      if (v <= 3721000) return 52237 + Math.ceil((v - 1290000) / 100) * 5.5;
+      return 185942 + Math.ceil((v - 3721000) / 100) * 7.0;
     }
 
     if (st === 'VIC') {
@@ -607,10 +608,10 @@
       tierLblKo = '$2M 초과~$3M 이하 구간';
       tierLblEn = 'A$2M–A$3M tier';
     } else {
-      var extraMillions = Math.min(4, Math.ceil((v - 3000000) / 1000000));
-      stdFee = 62600 * Math.pow(2, extraMillions);
-      tierLblKo = '$3M 초과 고액 구간';
-      tierLblEn = '> A$3M high-value tier';
+      var extraMillions = Math.ceil((v - 3000000) / 1000000);
+      stdFee = Math.min(1245500, 62600 + extraMillions * 31300);
+      tierLblKo = v > 40000000 ? '$40M 초과 ATO 최고 상한 구간' : '$3M 초과 고액 구간 (+$31,300/$1M)';
+      tierLblEn = v > 40000000 ? '> A$40M ATO maximum fee cap' : '> A$3M linear tier (+A$31,300 per A$1M)';
     }
 
     if (dwellingType === 'established') {
